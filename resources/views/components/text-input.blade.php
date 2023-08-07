@@ -3,5 +3,5 @@
         {{ $getLabel() }}
     </span>
 
-    <input type="text" />
+    <input type="text" wire:model.live="{{ $getName() }}" />
 </label>
