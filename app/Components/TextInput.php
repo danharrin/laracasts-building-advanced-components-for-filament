@@ -11,7 +11,11 @@ class TextInput implements Htmlable
 {
     protected string | \Closure $label;
 
+    protected int | \Closure | null $maxLength = null;
+
     protected Component $livewire;
+
+    protected static array $configurations = [];
 
     public function __construct(
         protected string $name,
@@ -21,12 +25,30 @@ class TextInput implements Htmlable
 
     public static function make(string $name): self
     {
-        return new self($name);
+        $input = new self($name);
+
+        foreach (self::$configurations as $configuration) {
+            $configuration($input);
+        }
+
+        return $input;
+    }
+
+    public static function configureUsing(\Closure $configure): void
+    {
+        self::$configurations[] = $configure;
     }
 
     public function label(string | \Closure $label): self
     {
         $this->label = $label;
+
+        return $this;
+    }
+
+    public function maxLength(int | \Closure | null $length): self
+    {
+        $this->maxLength = $length;
 
         return $this;
     }
@@ -73,6 +95,11 @@ class TextInput implements Htmlable
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function getMaxLength(): ?int
+    {
+        return $this->evaluate($this->maxLength);
     }
 
     public function render(): View
