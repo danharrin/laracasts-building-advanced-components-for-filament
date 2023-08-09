@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Forms\Components\ColorPicker;
 use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
@@ -24,7 +25,12 @@ class DemoForm extends Component implements HasForms
     {
         return $form
             ->schema([
-                //
+                ColorPicker::make('color1')
+                    ->default('#ff0000')
+                    ->width(200),
+                ColorPicker::make('color2')
+                    ->default('#00ff00')
+                    ->width(100),
             ])
             ->statePath('data');
     }
