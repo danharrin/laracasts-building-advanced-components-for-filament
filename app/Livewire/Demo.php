@@ -6,7 +6,7 @@ use App\Components\TextInput;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
-class TestForm extends Component
+class Demo extends Component
 {
     public $email;
 
@@ -22,7 +22,7 @@ class TestForm extends Component
         $emailInput = TextInput::make('email')
             ->livewire($this);
 
-        return view('livewire.test-form', [
+        return view('livewire.demo', [
             'nameInput' => $nameInput,
             'emailInput' => $emailInput,
         ]);

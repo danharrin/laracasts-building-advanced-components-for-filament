@@ -1,7 +1,7 @@
 <?php
 
 use App\Components\TextInput;
-use App\Livewire\TestForm;
+use App\Livewire\Demo;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/demo', TestForm::class);
+Route::get('/demo', Demo::class);
