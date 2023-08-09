@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Forms\Components\ColorPicker;
+use App\Forms\Components\Section;
 use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
@@ -25,12 +26,30 @@ class DemoForm extends Component implements HasForms
     {
         return $form
             ->schema([
-                ColorPicker::make('color1')
-                    ->default('#ff0000')
-                    ->width(200),
-                ColorPicker::make('color2')
-                    ->default('#00ff00')
-                    ->width(100),
+                Section::make('Colors')
+                    ->description('Pick your own color scheme for the app.')
+                    ->icon('heroicon-o-star')
+                    ->schema([
+                        ColorPicker::make('primary')
+                            ->default('#fbbf24')
+                            ->width(100),
+                        ColorPicker::make('secondary')
+                            ->default('#c084fc')
+                            ->width(100),
+                        ColorPicker::make('success')
+                            ->default('#84cc16')
+                            ->width(100),
+                        ColorPicker::make('warning')
+                            ->default('#facc15')
+                            ->width(100),
+                        ColorPicker::make('danger')
+                            ->default('#ef4444')
+                            ->width(100),
+                        ColorPicker::make('gray')
+                            ->default('#a1a1aa')
+                            ->width(100),
+                    ])
+                    ->columns(3),
             ])
             ->statePath('data');
     }
