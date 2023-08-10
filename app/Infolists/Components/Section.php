@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Forms\Components;
+namespace App\Infolists\Components;
 
 use App\Concerns\CanBeSection;
-use Filament\Forms\Components\Component;
+use Filament\Infolists\Components\Component;
 
 class Section extends Component
 {

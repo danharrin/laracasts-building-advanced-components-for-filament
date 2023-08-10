@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Infolists\Components\ColorEntry;
+use App\Infolists\Components\Section;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Infolists;
@@ -21,14 +22,26 @@ class DemoInfolist extends Component implements HasForms, HasInfolists
     {
         return $infolist
             ->schema([
-                ColorEntry::make('color')
-                    ->width(fn (string $state): int => match ($state) {
-                        '#ff0000' => 4,
-                        '#00ff00' => 6,
-                    }),
+                Section::make('Colors')
+                    ->description('Pick your own color scheme for the app.')
+                    ->icon('heroicon-o-star')
+                    ->schema([
+                        ColorEntry::make('primary'),
+                        ColorEntry::make('secondary'),
+                        ColorEntry::make('success'),
+                        ColorEntry::make('warning'),
+                        ColorEntry::make('danger'),
+                        ColorEntry::make('gray'),
+                    ])
+                    ->columns(3),
             ])
             ->state([
-                'color' => ['#ff0000', '#00ff00'],
+                'primary' => '#fbbf24',
+                'secondary' => '#c084fc',
+                'success' => '#84cc16',
+                'warning' => '#facc15',
+                'danger' => '#ef4444',
+                'gray' => '#a1a1aa',
             ]);
     }
 
