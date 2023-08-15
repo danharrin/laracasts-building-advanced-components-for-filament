@@ -24,6 +24,8 @@ class DemoTable extends Component implements HasForms, HasTable
             ->columns([
                 Tables\Columns\TextInputColumn::make('name'),
                 ColorColumn::make('color'),
+                Tables\Columns\TextColumn::make('email_verified_at')
+                    ->since(),
             ]);
     }
 
