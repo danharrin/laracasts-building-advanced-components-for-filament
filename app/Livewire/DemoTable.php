@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\User;
+use App\Tables\Columns\ColorColumn;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Tables;
@@ -21,7 +22,8 @@ class DemoTable extends Component implements HasForms, HasTable
         return $table
             ->query(User::query())
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextInputColumn::make('name'),
+                ColorColumn::make('color'),
             ]);
     }
 
