@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fd6edad0588c268cfbdc8e5f9f2404e",
+    "content-hash": "ddd0516358a7a44d23161c8d726ace6e",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -257,6 +257,43 @@
                 }
             ],
             "time": "2022-09-29T07:48:20+00:00"
+        },
+        {
+            "name": "danharrin/filament-toolkit",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/filament-toolkit",
+                "reference": "5b4b5e4a16fe82b7c877c19736ad55c51a1e3f5b"
+            },
+            "require": {
+                "filament/support": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DanHarrin\\FilamentToolkit\\FilamentToolkitServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DanHarrin\\FilamentToolkit\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Harrin",
+                    "email": "git@danharrin.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "danharrin/livewire-rate-limiting",

@@ -1,0 +1,27 @@
+{
+    "name": "danharrin/filament-toolkit",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DanHarrin\\FilamentToolkit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dan Harrin",
+            "email": "git@danharrin.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "filament/support": "^3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DanHarrin\\FilamentToolkit\\FilamentToolkitServiceProvider"
+            ]
+        }
+    }
+}
