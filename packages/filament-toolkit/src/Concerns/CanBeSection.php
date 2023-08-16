@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Concerns;
+namespace DanHarrin\FilamentToolkit\Concerns;
 
 trait CanBeSection
 {

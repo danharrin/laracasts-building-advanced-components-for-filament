@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tables\Filters;
+namespace DanHarrin\FilamentToolkit\Tables\Filters;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Fieldset;

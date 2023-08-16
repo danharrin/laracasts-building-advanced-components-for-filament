@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use App\Forms\Components\ColorPicker;
-use App\Forms\Components\Section;
+use DanHarrin\FilamentToolkit\Forms\Components\ColorPicker;
+use DanHarrin\FilamentToolkit\Forms\Components\Section;
 use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;

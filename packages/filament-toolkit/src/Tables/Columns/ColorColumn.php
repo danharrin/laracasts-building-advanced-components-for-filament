@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tables\Columns;
+namespace DanHarrin\FilamentToolkit\Tables\Columns;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\Concerns\CanBeValidated;
@@ -12,5 +12,5 @@ class ColorColumn extends Column implements Editable
     use CanBeValidated;
     use CanUpdateState;
 
-    protected string $view = 'tables.columns.color-column';
+    protected string $view = 'filament-toolkit::tables.columns.color-column';
 }

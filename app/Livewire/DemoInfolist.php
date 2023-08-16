@@ -2,11 +2,10 @@
 
 namespace App\Livewire;
 
-use App\Infolists\Components\ColorEntry;
-use App\Infolists\Components\Section;
+use DanHarrin\FilamentToolkit\Infolists\Components\ColorEntry;
+use DanHarrin\FilamentToolkit\Infolists\Components\Section;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Infolists;
 use Filament\Infolists\Concerns\InteractsWithInfolists;
 use Filament\Infolists\Contracts\HasInfolists;
 use Filament\Infolists\Infolist;
