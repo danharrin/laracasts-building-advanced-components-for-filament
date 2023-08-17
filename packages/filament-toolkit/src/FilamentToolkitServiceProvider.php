@@ -2,6 +2,7 @@
 
 namespace DanHarrin\FilamentToolkit;
 
+use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
@@ -19,7 +20,7 @@ class FilamentToolkitServiceProvider extends \Spatie\LaravelPackageTools\Package
     public function packageBooted()
     {
         FilamentAsset::register([
-            Js::make('iro', __DIR__ . '/../dist/iro.js'),
+            AlpineComponent::make('color-picker', __DIR__ . '/../dist/iro.js'),
         ], 'danharrin/filament-toolkit');
     }
 }

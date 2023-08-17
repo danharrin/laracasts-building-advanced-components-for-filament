@@ -1,3 +1,4 @@
+@php use Filament\Support\Facades\FilamentAsset; @endphp
 <x-dynamic-component
     :component="$getFieldWrapperView()"
     :field="$field"
@@ -7,19 +8,10 @@
     @endphp
 
     <div
-        x-data="{ state: $wire.entangle('{{ $getStatePath() }}') }"
-        x-init="
-            const colorPicker = new iro.ColorPicker($refs.picker, {
-                @if ($width)
-                    width: @js($width),
-                @endif
-                color: state,
-            });
-
-            colorPicker.on('color:change', (color) => {
-                state = color.hexString
-            })
-        "
+        ax-load
+        ax-load-src="{{ FilamentAsset::getAlpineComponentSrc('color-picker', 'danharrin/filament-toolkit') }}"
+        x-ignore
+        x-data="colorPicker({ state: $wire.entangle('{{ $getStatePath() }}'), width: @js($width) })"
     >
         <div
             wire:ignore

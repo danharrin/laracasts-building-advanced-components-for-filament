@@ -5,7 +5,7 @@ esbuild.build({
     outfile: './dist/iro.js',
     bundle: true,
     mainFields: ['module', 'main'],
-    platform: 'browser',
+    platform: 'neutral',
     treeShaking: true,
     target: ['es2020'],
     minify: true,
