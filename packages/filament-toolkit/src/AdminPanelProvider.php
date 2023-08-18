@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Providers\Filament;
+namespace DanHarrin\FilamentToolkit;
 
-use DanHarrin\FilamentToolkit\Toolkit;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;

@@ -20,7 +20,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DanHarrin\\FilamentToolkit\\FilamentToolkitServiceProvider"
+                "DanHarrin\\FilamentToolkit\\FilamentToolkitServiceProvider",
+                "DanHarrin\\FilamentToolkit\\AdminPanelProvider"
             ]
         }
     }
